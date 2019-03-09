@@ -4,7 +4,7 @@ import { hot } from 'react-hot-loader';
 
 import './styles.css';
 
-import SprocketsContainer from './Sprockets/SprocketsContainer';
+import SprocketsContainer from './sprockets/SprocketsContainer';
 
 const App = () => (
   <div className="app">
