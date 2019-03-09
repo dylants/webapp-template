@@ -7,10 +7,12 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import reducerRegistry from './reducerRegistry';
 
 const isProd = process.env.NODE_ENV === 'production';
+const isTest = process.env.NODE_ENV === 'test';
 
-const middleware = isProd
-  ? applyMiddleware(thunk)
-  : composeWithDevTools(applyMiddleware(thunk, logger));
+const middleware =
+  isProd || isTest
+    ? applyMiddleware(thunk)
+    : composeWithDevTools(applyMiddleware(thunk, logger));
 
 function configureStore(initialState = {}, initialReducer = () => {}) {
   const store = createStore(initialReducer, initialState, middleware);
