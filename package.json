@@ -21,6 +21,8 @@
     "test": "yarn lint && yarn test:jest"
   },
   "dependencies": {
+    "@emotion/core": "10.0.7",
+    "@emotion/styled": "10.0.7",
     "body-parser": "1.18.3",
     "express": "4.16.4",
     "glob": "7.1.3",
